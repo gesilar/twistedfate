@@ -1,0 +1,22 @@
+{
+    "name": "twistedfate",
+    "version": "1.0.0",
+    "description": "it is the zoom of tecknigue",
+    "main": "index.js",
+    "scripts": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gesilar/twistedfate.git"
+    },
+    "keywords": [
+        "tecknigue"
+    ],
+    "author": "gesilar",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gesilar/twistedfate/issues"
+    },
+    "homepage": "https://github.com/gesilar/twistedfate#readme"
+}
