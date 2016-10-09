@@ -1,0 +1,5 @@
+#ignore folders
+.vscode
+node_modules
+
+#ignore files
