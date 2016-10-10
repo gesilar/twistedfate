@@ -21,11 +21,14 @@
     "url": "https://github.com/gesilar/twistedfate/issues"
   },
   "homepage": "https://github.com/gesilar/twistedfate#readme",
+  "dependencies":{
+    "react": "^15.3.2"
+  },
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
-    "react": "^15.3.2",
+    "babel-preset-react": "^6.16.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   }
