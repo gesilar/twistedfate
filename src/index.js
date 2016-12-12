@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Baselayout from "./components/layout/BaseLayout";
+import Baselayout from "./components/layouts/BaseLayout";
 class App extends React.Component{
     constructor(){
         super();
@@ -14,4 +14,4 @@ class App extends React.Component{
         )
     }
 }
-ReactDOM.render(<App />, document.getElementById("content"));
+ReactDOM.render(<App />, document.getElementById("app"));
