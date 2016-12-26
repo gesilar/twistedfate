@@ -1,5 +1,6 @@
 var path=require('path');
 var webpack = require("webpack");
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 const config={
     entry:{
         app:["webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server",path.resolve(".")+"/src/index.js"]
@@ -21,11 +22,20 @@ const config={
                 query:{
                     presets: ["react","es2015"]
                 }
+            },
+            {
+                test:/.css$/,
+                loader:ExtractTextWebpackPlugin.extract('style-loader','css-loader')
+            },
+            {
+                test:/.less$/,
+                loader:"style!css!less"
             }
         ]
     },
     plugins:[
-        new webpack.HotModuleReplacementPlugin() 
+        new webpack.HotModuleReplacementPlugin() ,
+        new ExtractTextWebpackPlugin('all.css')
     ]
 }
 console.log(config.entry);

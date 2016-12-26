@@ -1,0 +1,49 @@
+.order {
+  font-family: 'microsoft yahei';
+  font-size: 14px;
+}
+.order .addOrderBlock {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.order .addOrderBlock .buyerInfo {
+  display: flex;
+}
+.order .addOrderBlock .time {
+  display: inline-block;
+}
+.order .addOrderBlock .addBtn {
+  display: inline-block;
+}
+.order .addGoodsBlock {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.order .addGoodsBlock .goodsInfo {
+  display: flex;
+}
+.order .goodsTableList {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: left;
+}
+.order .goodsTableList .goodsListHead th {
+  width: 150px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.navBlock {
+  width: 15%;
+}
+.navBlock .nav ul {
+  list-style: none;
+  padding: 0;
+}
+.contentBlock {
+  width: 85%;
+}

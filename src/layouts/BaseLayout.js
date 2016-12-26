@@ -1,12 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-class BaseLayout extends React.Component{
-    constructor(){
+class BaseLayout extends React.Component {
+    constructor() {
         super();
     }
-    render(){
+    render() {
         return (
-            <div>test</div>
+            <div className='container'>
+                {this.props.children}
+            </div>
         )
     }
 }
