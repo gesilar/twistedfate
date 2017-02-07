@@ -4,6 +4,7 @@ config
 build
 node_modules
 .vscode
+dist
 #ignore files
 *.log
 

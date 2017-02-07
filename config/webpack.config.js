@@ -1,6 +1,7 @@
 var path=require('path');
 var webpack = require("webpack");
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin =require('uglify-js-plugin');
 const config={
     entry:{
         dist:["webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server",path.resolve(".")+"/src/index.js"]
@@ -9,7 +10,7 @@ const config={
         path:path.resolve(".")+"/dist",
         filename:"dist.js"
     },
-    devtool:"sourcemap",
+    devtool:"source-map",
     resolve: {
         extensions: ['','.coffee','.js']
     },
@@ -35,9 +36,12 @@ const config={
     },
     plugins:[
         new webpack.HotModuleReplacementPlugin() ,
-        new ExtractTextWebpackPlugin('all.css')
+        new UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
     ]
 }
-console.log(config.entry);
 
 module.exports=config;

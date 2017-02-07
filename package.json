@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build": "webpack --config ./config/webpack.config.js",
-    "dev": "node build/server.js"
+    "build": "gulp build",
+    "dev": "gulp dev"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "jasmine-core": "",
     "less-loader": "^2.2.3",
     "style-loader": "^0.13.1",
+    "uglify-js-plugin": "0.0.6",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   }
