@@ -3,11 +3,11 @@ var webpack = require("webpack");
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 const config={
     entry:{
-        search:["webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server",path.resolve(".")+"/src/search.js"]
+        dist:["webpack-dev-server/client?http://localhost:8080/", "webpack/hot/dev-server",path.resolve(".")+"/src/index.js"]
     },
     output:{
         path:path.resolve(".")+"/dist",
-        filename:"search.js"
+        filename:"dist.js"
     },
     devtool:"sourcemap",
     resolve: {

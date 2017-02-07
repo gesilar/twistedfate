@@ -6,10 +6,3 @@ gulp.task('cssIndex',function() {
         .pipe(less())
         .pipe(gulp.dest('dist/styles'))
 })
-
-
-gulp.task('cssSearch',function() {
-    gulp.src('src/search.less')
-        .pipe(less())
-        .pipe(gulp.dest('dist/styles'))
-})
