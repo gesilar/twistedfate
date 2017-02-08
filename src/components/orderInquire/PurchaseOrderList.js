@@ -18,17 +18,21 @@ class PurchaseOrderList extends React.Component {
             <div>
                 {
                     this.props.purchaseOrderList.map((order) => {
-                        return (<div>
-                            <div className='addOrderBlock'>
-                                <div className='buyerInfo'>
-                                    <div className='orderNo'>订单号:{order.orderId}</div>
-                                    <div className='time'>
-                                        订单时间：{order.date}
+                        return (
+                            <div className="orderInfo">
+                                <div className="leftBlock"><input type="checkbox"/></div>
+                                <div className="rightBlock">
+                                    <div className='addOrderBlock'>
+                                        <div className='buyerInfo'>
+                                            <div className='orderNo'>订单号:{order.orderId}</div>
+                                            <div className='time'>
+                                                订单时间：{order.date}
+                                            </div>
+                                        </div>
                                     </div>
+                                    <GoodList goodsList={order.goodsList} type="in"/>
                                 </div>
                             </div>
-                            <GoodList goodsList={order.goodsList} />
-                        </div>
                         );
                     })
                 }

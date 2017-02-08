@@ -35,12 +35,7 @@ const config={
         ]
     },
     plugins:[
-        new webpack.HotModuleReplacementPlugin() ,
-        new UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        })
+        new webpack.HotModuleReplacementPlugin()
     ]
 }
 

@@ -11,16 +11,16 @@ class Nav extends React.Component {
       <div className='nav'>
         <ul>
           <li>
-            <Link to='/order' >Order</Link>
+            <Link to='/order' >下&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单</Link>
           </li>
           <li>
-            <Link to='/orderInquire'>orderInquire</Link>
+            <Link to='/orderInquire'>订单查询</Link>
           </li>
           <li>
-            <Link to='/purchase'>purchase</Link>
+            <Link to='/purchase'>进&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;货</Link>
           </li>
           <li>
-            <Link to='/storeManage'>storeManage</Link>
+            <Link to='/storeManage'>库存管理</Link>
           </li>
         </ul>
       </div>

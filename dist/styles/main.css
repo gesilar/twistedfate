@@ -3,33 +3,127 @@
   font-size: 14px;
 }
 .order .addOrderBlock {
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 .order .addOrderBlock .buyerInfo {
   display: flex;
+  height: 40px;
+  line-height: 40px;
+}
+.order .addOrderBlock .buyerInfo div {
+  width: 25%;
 }
 .order .addOrderBlock .time {
   display: inline-block;
+  height: 40px;
+  width: 25%;
 }
 .order .addOrderBlock .addBtn {
   display: inline-block;
+  height: 40px;
+  width: 25%;
 }
-.order .addGoodsBlock {
+.orderInquire {
+  box-sizing: border-box;
+}
+.orderInquire .linkBlock {
+  background: #f2f2f2;
+}
+.orderInquire .linkBlock a {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.orderInquire .linkBlock a:hover {
+  cursor: pointer;
+  background: #d8d8d8;
+}
+.orderInquire .listOperate {
+  height: 42px;
+  line-height: 42px;
+  border-bottom: 2px solid #d8d8d8;
+}
+.orderInquire .listOperate a {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  font-weight: 800;
+}
+.orderInquire .listOperate a:hover {
+  cursor: pointer;
+  color: blue;
+}
+.orderInquire .orderInfo {
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 20px;
+}
+.orderInquire .orderInfo .leftBlock {
+  width: 5%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 8px;
+}
+.orderInquire .orderInfo .rightBlock {
+  display: inline-block;
+  width: 95%;
+}
+.orderInquire .orderInfo .rightBlock .addOrderBlock .buyerInfo div {
+  display: inline-block;
+  width: 25%;
+  height: 40px;
+  line-height: 40px;
+}
+.active {
+  background: #d8d8d8;
+}
+.nav {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  box-sizing: inherit;
+  border-top: 3px solid #d8d8d8;
+  margin: 0;
+}
+.nav ul li {
+  padding: 0 10px;
+  height: 42px;
+  border-bottom: 1px solid #d8d8d8;
+  line-height: 42px;
+}
+.nav ul li:hover {
+  cursor: pointer;
+  background: #dfe6ec;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: "microsoft yahei";
+}
+.nav ul .active {
+  background: #dfe6ec;
+}
+.addGoodsBlock {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
 }
-.order .addGoodsBlock .goodsInfo {
+.addGoodsBlock .goodsInfo {
   display: flex;
 }
-.order .goodsTableList {
+.goodsTableList {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 100%;
   text-align: left;
 }
-.order .goodsTableList .goodsListHead th {
+.goodsTableList .goodsListHead th {
   width: 150px;
 }
 .container {
@@ -39,10 +133,6 @@
 }
 .navBlock {
   width: 15%;
-}
-.navBlock .nav ul {
-  list-style: none;
-  padding: 0;
 }
 .contentBlock {
   width: 85%;

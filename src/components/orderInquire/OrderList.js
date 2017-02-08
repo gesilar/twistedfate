@@ -18,28 +18,34 @@ class OrderList extends React.Component {
             <div>
                 {
                     this.props.orderList.map((order) => {
-                        return (<div>
-                            <div className='addOrderBlock'>
-                                <div className='buyerInfo'>
-                                    <div className='orderNo'>订单号:{order.orderId}</div>
-                                    <div className='buyerName'>
-                                        姓名：{order.name}
+                        return (
+                            <div className = "orderInfo">
+                                <div className="leftBlock"><input type="checkbox"/></div>
+                                <div className="rightBlock">
+                                    <div className='addOrderBlock'>
+                                        <div className='buyerInfo'>
+                                            <div className='orderNo'>订单号:{order.orderId}</div>
+                                            <div className='orderStatus'>订单状态:{order.status}</div>
+                                            <div className='saler'>销售:{order.saler}</div>
+                                            <div className='time'>
+                                                订单时间：{order.date}
+                                            </div>
+                                            <div className='buyerName'>
+                                                姓名：{order.name}
+                                            </div>
+                                            <div className='phone'>
+                                                手机：{order.phone}
+                                            </div>
+                                            <div className='address'>
+                                                地址：{order.address}
+                                            </div>
+                                            <div className='remark'>
+                                                备注：{order.remark}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className='phone'>
-                                        手机：{order.phone}
-                                    </div>
-                                    <div className='address'>
-                                        地址：{order.address}
-                                    </div>
-                                    <div className='remark'>
-                                        备注：{order.remark}
-                                    </div>
+                                    <GoodList goodsList={order.goodsList} operate={['del', 'modify']}/>
                                 </div>
-                                <div className='time'>
-                                    订单时间：{order.date}
-                                </div>
-                            </div>
-                            <GoodList goodsList={order.goodsList} />
                         </div>
                         );
                     })

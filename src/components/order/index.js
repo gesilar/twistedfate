@@ -8,6 +8,7 @@ import _ from 'lodash';
 import * as orderListApi from '../../api/orderList';
 
 const initState = {
+    operate:['del', 'modify'],
     order: {
         orderId: '',
         date: '',
@@ -17,6 +18,7 @@ const initState = {
         phone: '',
         address: '',
         remark: '',
+        status:'未发货',
         goodsList: []
     }
 }
@@ -74,15 +76,22 @@ class Order extends React.Component {
     _onModifyGood() {
 
     }
-    _onDelGood(goodInfo) {
-        let goodsList = this.state.order.goodsList;
+    _onDelGood(index) {
+        const order = this.state.order;
+        const goodsList = this.state.order.goodsList;
+        goodsList.splice(index, 1);
+        this.setState({
+            order: Object.assign({}, order, {
+                goodsList
+            })
+        })
     }
     render() {
         return (
             <div className='order'>
                 <BuyerInfo onAddOrder={(orderInfo) => { this._onAddOrder(orderInfo) } } />
                 <AddGood onAddGood={(goodInfo) => { this._onAddGood(goodInfo) } } />
-                <GoodList goodsList={this.state.order.goodsList} onModifyGood={() => { this._onModifyGood() } } onDelGood={() => this._onDelGood()} />
+                <GoodList goodsList={this.state.order.goodsList} onModifyGood={() => { this._onModifyGood() } } onDelGood={(index) => this._onDelGood(index)} operate={this.state.operate}/>
             </div>
         );
     }

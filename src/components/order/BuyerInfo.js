@@ -6,6 +6,7 @@ class BuyerInfo extends React.Component {
     constructor() {
         super();
         this.state = {
+            saler: "锦光",
             name:"",
             phone:"",
             address:"",

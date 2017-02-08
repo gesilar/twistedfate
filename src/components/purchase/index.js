@@ -4,12 +4,13 @@ import ReactDOM from "react-dom";
 import GoodList from "../common/GoodList";
 import AddGood from "../common/AddGood";
 import * as purchaseApi from "../../api/purchase";
+import {dateFormate} from "../../utils/dateUtils";
 class Purchase extends React.Component{
     constructor(){
         super();
         this.state = {
             orderId:"",
-            date:"",
+            date: dateFormate(new Date()),
             goodsList:[]
         }
     }
@@ -35,14 +36,14 @@ class Purchase extends React.Component{
                <div className='order'>
                 <div className='addOrderBlock'>
                     <div className='time'>
-                        订单时间：<input type='date'/>
+                        订单时间：<input type='date' value={this.state.date} onChange={(e)=>{this.setState({date: e.target.value})}}/>
                     </div>
                     <div className='addBtn'>
                         <button onClick = {() => {this._onAddOrder();}}>add order</button>
                     </div>
                 </div>
-                <AddGood onAddGood={(goodInfo) => {this._onAddGood(goodInfo)}}/>
-                <GoodList goodsList={this.state.goodsList} />
+                <AddGood onAddGood={(goodInfo) => {this._onAddGood(goodInfo)}} type="in"/>
+                <GoodList goodsList={this.state.goodsList} type="in"/>
             </div>
         )
     }

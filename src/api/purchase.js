@@ -20,7 +20,6 @@ const getOrder = function(options) {
     Requester.send({
         url: '/purchase/getOrder',
         type: 'post',
-        // data: options.order,
         success(response) {
             options.success&&options.success(response);
         },
